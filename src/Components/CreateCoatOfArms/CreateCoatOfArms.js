@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types'
 import './CreateCoatOfArms.css'
 
-class CoatOfArms extends Component {
+class CreateCoatOfArms extends Component {
   // allows user to create a coat of arms -- probably a controlled form???
   // may also need the ability to select a shield
   // propTypes
@@ -23,7 +24,6 @@ class CoatOfArms extends Component {
   submitHandler = (event) => {
     event.preventDefault()
     this.props.getEmojisWithSearchTerm(this.state.searchTerm)
-
   }
 
   render() {
@@ -43,4 +43,8 @@ class CoatOfArms extends Component {
   }
 }
 
-export default CoatOfArms;
+export default CreateCoatOfArms;
+
+CreateCoatOfArms.propTypes = {
+  searchTerm: PropTypes.string
+}
