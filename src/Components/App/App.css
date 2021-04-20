@@ -10,12 +10,8 @@ font-family: 'Montserrat', sans-serif;*/
   padding: 0;
 }
 
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40px;
+body {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .logo-name {

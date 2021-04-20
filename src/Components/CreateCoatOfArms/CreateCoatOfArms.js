@@ -11,7 +11,6 @@ class CreateCoatOfArms extends Component {
   //  and supporters
   constructor(props) {
     super(props);
-    console.log(props)
 
     this.state = {
       currentCoat: {}

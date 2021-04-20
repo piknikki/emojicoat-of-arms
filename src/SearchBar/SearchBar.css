@@ -29,7 +29,7 @@ form input[type=text] {
     border: none;
     border-radius: 30px;
     padding: 10px 20px;
-    /*font-family: 'Raleway', sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
 }
 
 input:active {
@@ -52,5 +52,5 @@ form button.searchBtn {
     color: #fff;
     font-weight: 700;
     font-size: 1.2em;
-    /*font-family: 'Raleway', sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
 }
