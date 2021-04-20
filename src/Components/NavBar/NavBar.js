@@ -1,13 +1,14 @@
 import React from 'react';
 import './NavBar.css'
-import logo from "../../Assets/emojilogo.png";
+// import logo1 from "../../Assets/emojilogo.png";
 
-function NavBar() {
+function NavBar({ logo }) {
   // links to gallery, create
+  console.log(logo)
 
   return (
     <nav>
-      <img src={logo} className="App-logo" alt="logo" />
+      <span>{logo.character}</span>
       <h1 className="logo-name">Emoji Coat of Arms</h1>
     </nav>
 

@@ -1,19 +1,46 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './CreateCoatOfArms.css'
 
-function CoatOfArms() {
+class CoatOfArms extends Component {
   // allows user to create a coat of arms -- probably a controlled form???
   // may also need the ability to select a shield
   // propTypes
   // todo ==> a complete coat of arms includes motto, crest, shield elements (emojis),
   //  and supporters
+  constructor(props) {
+    super(props);
 
-  return (
-    <div>
-      <h1>Create your own Emoji Coat of Arms</h1>
-      <p>A complete coat of arms includes motto, crest, shield elements (emojis), and supporters</p>
-    </div>
-  )
+    this.state = {
+      searchTerm: ''
+    }
+  }
+
+  changeHandler = (event) => {
+    event.preventDefault()
+    this.setState({ searchTerm: event.target.value })
+  }
+
+  submitHandler = (event) => {
+    event.preventDefault()
+    this.props.getEmojisWithSearchTerm(this.state.searchTerm)
+
+  }
+
+  render() {
+    return (
+      <div>
+        <p>A complete coat of arms includes motto, crest, shield elements (emojis), and supporters</p>
+        <form className="search-form">
+          <input
+            type="text"
+            name="searchTerm"
+            onChange={this.changeHandler}
+          />
+          <button onClick={this.submitHandler}>Search</button>
+        </form>
+      </div>
+    )
+  }
 }
 
 export default CoatOfArms;
