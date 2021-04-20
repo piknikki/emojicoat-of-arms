@@ -8,7 +8,7 @@ function NavBar() {
   return (
     <nav>
       <img src={logo} className="App-logo" alt="logo" />
-      <h1>Navbar</h1>
+      <h1 className="logo-name">Emoji Coat of Arms</h1>
     </nav>
 
   )

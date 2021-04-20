@@ -13,8 +13,6 @@ function App() {
     <div className="app">
       <NavBar />
 
-      <h1>Home of Emoji Coat of Arms</h1>
-      <p>Landing page</p>
     </div>
   )
 }
