@@ -24,7 +24,7 @@ class App extends Component {
       .then(response => response.json())
       .then(logoEmojis => {
         this.setState({ logoEmojis })
-        const logoIndex = Math.floor(Math.random() * this.state.logoEmojis.length)
+        const logoIndex = Math.floor(Math.random() * 14)
         this.setState({ currentEmoji: this.state.logoEmojis[logoIndex] })
       })
       .catch(error => this.setState({ error: error.message }))

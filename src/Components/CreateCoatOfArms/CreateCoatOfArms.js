@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import './CreateCoatOfArms.css'
+import SearchBar from "../../SearchBar/SearchBar";
 
 class CreateCoatOfArms extends Component {
   // allows user to create a coat of arms -- probably a controlled form???
@@ -10,34 +11,18 @@ class CreateCoatOfArms extends Component {
   //  and supporters
   constructor(props) {
     super(props);
+    console.log(props)
 
     this.state = {
-      searchTerm: ''
+      currentCoat: {}
     }
   }
 
-  changeHandler = (event) => {
-    event.preventDefault()
-    this.setState({ searchTerm: event.target.value })
-  }
-
-  submitHandler = (event) => {
-    event.preventDefault()
-    this.props.getEmojisWithSearchTerm(this.state.searchTerm)
-  }
 
   render() {
     return (
       <div>
-        <p>A complete coat of arms includes motto, crest, shield elements (emojis), and supporters</p>
-        <form className="search-form">
-          <input
-            type="text"
-            name="searchTerm"
-            onChange={this.changeHandler}
-          />
-          <button onClick={this.submitHandler}>Search</button>
-        </form>
+        <SearchBar getEmojisWithSearchTerm={this.props.getEmojisWithSearchTerm}/>
       </div>
     )
   }

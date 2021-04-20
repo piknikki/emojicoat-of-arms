@@ -1,10 +1,8 @@
 import React from 'react';
-import './NavBar.css'
-// import logo1 from "../../Assets/emojilogo.png";
+import './NavBar.css';
 
 function NavBar({ logo }) {
   // links to gallery, create
-  console.log(logo)
 
   return (
     <nav>
