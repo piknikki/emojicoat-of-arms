@@ -1,19 +1,33 @@
 import React from 'react'
-// import './NotFound.css'
+import './NotFound.css'
 import { Link } from "react-router-dom";
 
 const NoRoute = () => {
   return (
     <div className="wrapper-404">
-      <div className="oops">
-        <h3>Oops!</h3>
-        <Link to="/" className="btn">Go back to main page . . .
-          <i className="far fa-home fa-2x home"> </i>
+      <h2 className="oops">404 <span>😵</span></h2>
+      <p className="oops-p"><span>🤔</span>How did this happen? </p>
+      <div className="link-container" >
+        <p className="oops-p2">
+          oh well.
+          <span className="shrug">🤷</span>
+          Might as well check out some inspiration
+        </p>
+
+        <Link to="/gallery" className="lnk">
+          <button className="btn">
+            <span>✨</span>
+            Gallery
+            <span>✨</span>
+          </button>
         </Link>
 
-        <Link to="/gallery" className="btn">Or to the gallery . . .
-          <i className="far fa-home fa-2x home"> </i>
-        </Link>
+        {/*<Link to="/" className="lnk">*/}
+        {/*  <button className="btn">*/}
+        {/*    Home*/}
+        {/*    <span>🏡</span>*/}
+        {/*  </button>*/}
+        {/*</Link>*/}
       </div>
     </div>
   )

@@ -1,0 +1,50 @@
+.wrapper-404 {
+    margin: 5%;
+    text-align: center;
+    color: white;
+}
+
+.oops {
+    font-size: 10rem;
+}
+
+.oops-p {
+    font-size: 4rem;
+}
+
+.oops-p2 {
+    font-size: 2rem;
+}
+
+span {
+    font-size: 0.6em;
+    padding: 0 10px;
+}
+
+.shrug {
+    font-size: 1em;
+}
+
+.link-container {
+    margin: 30px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.lnk {
+    font-size: 1.8rem;
+    margin: 30px 0;
+}
+
+.btn {
+    display: block;
+    background: #0E0043;
+    color: white;
+    line-height: 1.2;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1em;
+    /*border: */
+}
