@@ -16,9 +16,9 @@ const NoRoute = () => {
 
         <Link to="/gallery" className="lnk">
           <button className="btn">
-            <span>✨</span>
+            <span className="sparkles">✨</span>
             Gallery
-            <span>✨</span>
+            <span className="sparkles">✨</span>
           </button>
         </Link>
 

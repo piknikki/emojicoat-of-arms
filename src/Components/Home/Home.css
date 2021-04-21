@@ -10,6 +10,10 @@
     padding-top: 50px;
 }
 
+/*.lower-container {*/
+/*    text-align: center;*/
+/*}*/
+
 .intro {
     font-size: 2rem;
     margin: 30px;
@@ -31,3 +35,25 @@
     padding: 12px;
     border-radius: 10px;
 }
+
+.lower-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-btn {
+
+    background: #0E0043;
+    color: white;
+    line-height: 1.2;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1.5em;
+}
+
+.toolbox {
+    margin: 05px;
+    font-size: 1.1em;
+}
+

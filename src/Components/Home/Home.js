@@ -16,8 +16,13 @@ const Home = () => {
         </div>
 
       </div>
+      <div className="lower-container">
+        <button className="start-btn">
+          Get Started Now
+          <span className="toolbox">🧰</span>
+        </button>
+      </div>
 
-      <button>Get Started Now</button>
     </div>
   )
 }
