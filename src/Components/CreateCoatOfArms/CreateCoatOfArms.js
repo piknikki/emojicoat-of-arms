@@ -43,8 +43,8 @@ class CreateCoatOfArms extends Component {
             }
           </section>
           <section className="right">
-            <div className="img-wrapper">
-              <img src={shield} className="shield" alt="shield shape"/>
+            <div className="img-wrapper" id="imgWrapper" style={{backgroundImage: `url(${shield})`}}>
+              {/*<img src={shield} className="shield" alt="shield shape"/>*/}
               <div className="emoji-wrapper">
                 {this.state.foundEmojis &&
                 <Emojis emojis={this.state.currentCoatEmojis} selectEmoji={this.selectEmoji}/>

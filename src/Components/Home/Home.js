@@ -12,7 +12,7 @@ const Home = () => {
         <p className="intro">Now you can build your family crest with emojis.
           Yes, it's the one thing you didn't know you needed. Until now.
         </p>
-        <div className="img-wrapper">
+        <div className="img-wrapper-home">
           <img src={example} className="example" alt="example emoji coat of arms"/>
         </div>
 
