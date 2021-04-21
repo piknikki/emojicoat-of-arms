@@ -1,7 +1,7 @@
 import React from 'react';
 import './NavBar.css';
 
-function NavBar({ logo }) {
+const NavBar = ({ logo }) => {
   // links to gallery, create
 
   return (

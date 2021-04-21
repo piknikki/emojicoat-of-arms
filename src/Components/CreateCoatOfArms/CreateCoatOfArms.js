@@ -30,5 +30,6 @@ class CreateCoatOfArms extends Component {
 export default CreateCoatOfArms;
 
 CreateCoatOfArms.propTypes = {
-  searchTerm: PropTypes.string
+  searchTerm: PropTypes.string,
+  currentCoat: PropTypes.object
 }
