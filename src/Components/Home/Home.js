@@ -1,20 +1,15 @@
 import React from 'react';
-import './Home.css'
-import NavBar from "../NavBar/NavBar";
+import './Home.css';
 
 function Home() {
-  // class component, holds state
-  // api calls
-  // router
-  // array to hold saved coat of arms
-  // current coat
+  // Landing page component
 
   return (
-    <div>
-      <NavBar />
-
-      <h1>Home of Emoji Coat of Arms</h1>
-      <p>Landing page</p>
+    <div className="home">
+      <p>Now you can build your family crest with emojis.
+        Yes, it's the one thing you didn't know you needed. Until now.
+      </p>
+      <button>Get Started Now</button>
     </div>
   )
 }
