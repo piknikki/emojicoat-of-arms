@@ -21,7 +21,6 @@ class App extends Component {
     }
   }
 
-  // api calls -- search with searchTerm
   componentDidMount() {
     fetch(`https://emoji-api.com/emojis?search=grin&access_key=ccd4ba88d6d80505f138b2e3e97bd3da9fe0dbf5`)
       .then(response => response.json())
@@ -33,14 +32,11 @@ class App extends Component {
       .catch(error => this.setState({ error: error.message }))
   }
 
-  getEmojisWithSearchTerm = (searchTerm) => {
-    fetch(`https://emoji-api.com/emojis?search=${searchTerm}&access_key=ccd4ba88d6d80505f138b2e3e97bd3da9fe0dbf5`)
-      .then(response => response.json())
-      .then(foundEmojis => this.setState({ foundEmojis }))
-      .catch(error => this.setState({ error: error.message }))
+  saveToGallery = (emojis) => {
+    console.log(emojis)
+    this.setState({ savedCoats: [...this.state.savedCoats, emojis] })
+    console.log(this.state.savedCoats)
   }
-
-  // router
 
   render() {
     return (
@@ -61,13 +57,16 @@ class App extends Component {
             <Route
               exact
               path="/Create"
-              render={() => <CreateCoatOfArms getEmojisWithSearchTerm={this.getEmojisWithSearchTerm} />}
+              render={() => <CreateCoatOfArms
+                foundEmojis={this.state.foundEmojis}
+                saveToGallery={this.saveToGallery}
+              />}
             />
 
             <Route
               exact
               path="/Gallery"
-              render={() => <Gallery />}
+              render={() => <Gallery savedCoats={this.state.savedCoats}/>}
             />
 
             <Route

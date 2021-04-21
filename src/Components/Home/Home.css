@@ -20,7 +20,7 @@
     color: white;
 }
 
-.img-wrapper {
+.img-wrapper-home {
     max-width: 220px;
     padding: 8px;
     border-radius: 10px;
@@ -43,7 +43,6 @@
 }
 
 .start-btn {
-
     background: #0E0043;
     color: white;
     line-height: 1.2;
