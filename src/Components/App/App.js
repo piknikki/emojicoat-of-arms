@@ -59,7 +59,7 @@ class App extends Component {
             <Route
               exact
               path="/Gallery"
-              render={() => <Gallery />}
+              render={() => <Gallery savedCoats={this.state.savedCoats}/>}
             />
 
             <Route

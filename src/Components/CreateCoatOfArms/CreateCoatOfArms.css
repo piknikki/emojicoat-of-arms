@@ -15,7 +15,7 @@
 }
 
 .img-wrapper {
-    height: 100vh;
+    height: 40vh;
     background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
@@ -25,19 +25,6 @@
     /*position: relative;*/
     /*background: linear-gradient(#e66465, #9198e5);;*/
 }
-
-#imgWrapper {
-    height: 100vh;
-    /*width: 440px;*/
-}
-
-/*.shield {*/
-/*    width: 350px;*/
-/*    !*margin: 0 30px;*!*/
-/*    background: white;*/
-/*    padding: 12px;*/
-/*    border-radius: 10px;*/
-/*}*/
 
 .emoji-wrapper {
     display: flex;

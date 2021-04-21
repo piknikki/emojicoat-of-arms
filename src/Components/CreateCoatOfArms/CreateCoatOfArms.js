@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import './CreateCoatOfArms.css'
 import SearchBar from "../SearchBar/SearchBar";
 import Emojis from "../Emojis/Emojis";
+import Buttons from "../Buttons/Buttons";
 import shield from '../../Assets/shield1.png'
 
 class CreateCoatOfArms extends Component {
@@ -29,7 +30,12 @@ class CreateCoatOfArms extends Component {
 
   selectEmoji = (emoji) => {
     this.setState({ currentCoatEmojis: [...this.state.currentCoatEmojis, emoji] })
-    console.log("function works", emoji)
+  }
+
+  saveToGallery = () => {
+    // pass up this.state.currentCoatEmojis to App.js to be saved as savedCoats
+
+    //  todo ==> create a gallery component that builds up a gallery card with the shield behind it with all the emojis
   }
 
   render() {
@@ -43,16 +49,16 @@ class CreateCoatOfArms extends Component {
             }
           </section>
           <section className="right">
-            <div className="img-wrapper" id="imgWrapper" style={{backgroundImage: `url(${shield})`}}>
-              {/*<img src={shield} className="shield" alt="shield shape"/>*/}
+            <div className="img-wrapper" style={{backgroundImage: `url(${shield})`}}>
               <div className="emoji-wrapper">
-                {this.state.foundEmojis &&
+                {this.state.currentCoatEmojis &&
                 <Emojis emojis={this.state.currentCoatEmojis} selectEmoji={this.selectEmoji}/>
                 }
               </div>
-            </div>
-          </section>
 
+            </div>
+            <Buttons saveToGallery={this.saveToGallery}/>
+          </section>
         </div>
       </div>
     )
