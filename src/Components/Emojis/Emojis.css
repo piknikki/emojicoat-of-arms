@@ -1,0 +1,8 @@
+.cards-container {
+    margin: 20px auto;
+    width: 50%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
