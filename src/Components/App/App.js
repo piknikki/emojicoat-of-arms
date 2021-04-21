@@ -32,6 +32,12 @@ class App extends Component {
       .catch(error => this.setState({ error: error.message }))
   }
 
+  saveToGallery = (emojis) => {
+    console.log(emojis)
+    this.setState({ savedCoats: [...this.state.savedCoats, emojis] })
+    console.log(this.state.savedCoats)
+  }
+
   render() {
     return (
       <div className="app">
@@ -53,6 +59,7 @@ class App extends Component {
               path="/Create"
               render={() => <CreateCoatOfArms
                 foundEmojis={this.state.foundEmojis}
+                saveToGallery={this.saveToGallery}
               />}
             />
 

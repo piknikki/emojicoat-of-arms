@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 import './CreateCoatOfArms.css'
 import SearchBar from "../SearchBar/SearchBar";
 import Emojis from "../Emojis/Emojis";
-import Buttons from "../Buttons/Buttons";
+// import Buttons from "../Buttons/Buttons";
 import shield from '../../Assets/shield1.png'
+import {Link} from "react-router-dom";
 
 class CreateCoatOfArms extends Component {
   // allows user to create a coat of arms -- probably a controlled form???
@@ -32,10 +33,8 @@ class CreateCoatOfArms extends Component {
     this.setState({ currentCoatEmojis: [...this.state.currentCoatEmojis, emoji] })
   }
 
-  saveToGallery = () => {
-    // pass up this.state.currentCoatEmojis to App.js to be saved as savedCoats
-
-    //  todo ==> create a gallery component that builds up a gallery card with the shield behind it with all the emojis
+  clickHandler = () => {
+    this.props.saveToGallery(this.state.currentCoatEmojis)
   }
 
   render() {
@@ -57,7 +56,11 @@ class CreateCoatOfArms extends Component {
               </div>
 
             </div>
-            <Buttons saveToGallery={this.saveToGallery}/>
+            <div className="button-container">
+              <Link to='/gallery' onClick={this.clickHandler}>
+                <button className="save-btn">SAVE</button>
+              </Link>
+            </div>
           </section>
         </div>
       </div>

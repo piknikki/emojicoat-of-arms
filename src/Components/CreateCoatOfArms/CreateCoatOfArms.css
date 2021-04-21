@@ -35,3 +35,25 @@
     z-index: 10;
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.save-btn {
+    display: block;
+    background: #0E0043;
+    color: white;
+    line-height: 1.2;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1em;
+    /*border: */
+}
+
+.save-btn:disabled {
+    color: dimgrey;
+}
+
