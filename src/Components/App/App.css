@@ -12,6 +12,7 @@ font-family: 'Montserrat', sans-serif;*/
 
 html {
   font-size: 100%;
+  background: #0E0043;
 }
 
 body {
@@ -20,9 +21,5 @@ body {
 
 a {
   text-decoration: none;
-}
-
-.app {
-  margin: 1% 3%;
 }
 

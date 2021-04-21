@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import './CreateCoatOfArms.css'
-import SearchBar from "../../SearchBar/SearchBar";
+import SearchBar from "../SearchBar/SearchBar";
 
 class CreateCoatOfArms extends Component {
   // allows user to create a coat of arms -- probably a controlled form???
