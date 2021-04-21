@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import example from '../../Assets/example.png'
 import './Home.css';
 
@@ -17,12 +18,13 @@ const Home = () => {
 
       </div>
       <div className="lower-container">
-        <button className="start-btn">
-          Get Started Now
-          <span className="toolbox">🧰</span>
-        </button>
+        <Link to="/create" >
+          <button className="start-btn">
+            Get Started Now
+            <span className="toolbox">🧰</span>
+          </button>
+        </Link>
       </div>
-
     </div>
   )
 }
