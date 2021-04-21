@@ -1,7 +1,7 @@
 import React from 'react';
 import './EditCoat.css'
 
-function EditCoat() {
+const EditCoat = () => {
   // takes current coat and allows user to edit it. Probably controlled form, maybe same as create???
   // propTypes
 

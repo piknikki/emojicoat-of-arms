@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import NavBar from '../NavBar/NavBar';
 import Home from "../Home/Home";
 import CreateCoatOfArms from "../CreateCoatOfArms/CreateCoatOfArms";
+import Gallery from "../Gallery/Gallery";
+import NotFound from "../NotFound/NotFound";
 
 class App extends Component {
   constructor() {
@@ -43,9 +46,38 @@ class App extends Component {
     return (
       <div className="app">
         <NavBar logo={this.state.currentEmoji}/>
-        <Home />
-        <CreateCoatOfArms getEmojisWithSearchTerm={this.getEmojisWithSearchTerm} />
+        <main>
+          {!!this.state.error &&
+          <h2 className="error-feedback">{this.state.error}</h2>
+          }
 
+          <Switch>
+            <Route
+              exact
+              path="/"
+              render={() => <Home />}
+            />
+
+            <Route
+              exact
+              path="/Create"
+              render={() => <CreateCoatOfArms getEmojisWithSearchTerm={this.getEmojisWithSearchTerm} />}
+            />
+
+            <Route
+              exact
+              path="/Gallery"
+              render={() => <Gallery />}
+            />
+
+            <Route
+              exact
+              path="/*"
+              render={() => <NotFound />}
+            />
+
+          </Switch>
+        </main>
       </div>
     )
   }

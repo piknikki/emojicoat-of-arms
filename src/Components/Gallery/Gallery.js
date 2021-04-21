@@ -1,7 +1,7 @@
 import React from 'react';
 import './Gallery.css'
 
-function Gallery() {
+const Gallery = () => {
   // takes all the coats created so far and displays them pleasantly
 
   return (

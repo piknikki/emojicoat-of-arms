@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css';
 
-function Home() {
+const Home = () => {
   // Landing page component
 
   return (
