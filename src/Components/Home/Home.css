@@ -17,13 +17,17 @@
 }
 
 .img-wrapper {
-    width: 220px;
+    max-width: 220px;
+    padding: 8px;
     border-radius: 10px;
+    position: relative;
     background: linear-gradient(#e66465, #9198e5);;
 }
 
 .example {
     width: 200px;
-    margin: 0 30px;
-
+    /*margin: 0 30px;*/
+    background: white;
+    padding: 12px;
+    border-radius: 10px;
 }
