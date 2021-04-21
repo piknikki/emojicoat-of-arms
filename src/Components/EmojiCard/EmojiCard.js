@@ -12,7 +12,7 @@ const EmojiCard = (props) => {
     selectEmoji } = props
 
   return (
-    <div className="emoji-card" onClick={() => selectEmoji(character)}>
+    <div className="emoji-card" onClick={() => selectEmoji(props)}>
       <figure id={slug}>
         <div className="character">{character}</div>
         {/*<figcaption>*/}

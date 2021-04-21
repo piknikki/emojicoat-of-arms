@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import './CreateCoatOfArms.css'
 import SearchBar from "../SearchBar/SearchBar";
 import Emojis from "../Emojis/Emojis";
+import shield from '../../Assets/shield1.png'
 
 class CreateCoatOfArms extends Component {
   // allows user to create a coat of arms -- probably a controlled form???
@@ -14,7 +15,7 @@ class CreateCoatOfArms extends Component {
     super(props);
 
     this.state = {
-      currentCoatEmojis: {},
+      currentCoatEmojis: [],
       foundEmojis: []
     }
   }
@@ -26,26 +27,32 @@ class CreateCoatOfArms extends Component {
       .catch(error => this.setState({ error: error.message }))
   }
 
-  mappedEmojis = () => {
-    this.state.foundEmojis.map(emoji => {
-      return <span>{emoji.character}</span>
-    })
+  selectEmoji = (emoji) => {
+    this.setState({ currentCoatEmojis: [...this.state.currentCoatEmojis, emoji] })
+    console.log("function works", emoji)
   }
-
-  // selectEmoji = (emoji) => {
-  //   // put into an array
-  //   this.state.selectedEmojis.push(emoji)
-  //   console.log("function works", emoji)
-  // }
 
   render() {
     return (
       <div>
         <SearchBar getEmojisWithSearchTerm={this.getEmojisWithSearchTerm}/>
         <div className="emojibox">
-          {this.state.foundEmojis &&
-            <Emojis emojis={this.state.foundEmojis}/>
-          }
+          <section className="left">
+            {this.state.foundEmojis &&
+              <Emojis emojis={this.state.foundEmojis} selectEmoji={this.selectEmoji}/>
+            }
+          </section>
+          <section className="right">
+            <div className="img-wrapper">
+              <img src={shield} className="shield" alt="shield shape"/>
+              <div className="emoji-wrapper">
+                {this.state.foundEmojis &&
+                <Emojis emojis={this.state.currentCoatEmojis} selectEmoji={this.selectEmoji}/>
+                }
+              </div>
+            </div>
+          </section>
+
         </div>
       </div>
     )
