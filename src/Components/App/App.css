@@ -10,11 +10,19 @@ font-family: 'Montserrat', sans-serif;*/
   padding: 0;
 }
 
+html {
+  font-size: 100%;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.logo-name {
-  font-family: 'Covered By Your Grace', cursive;
+a {
+  text-decoration: none;
+}
+
+.app {
+  margin: 1% 3%;
 }
 

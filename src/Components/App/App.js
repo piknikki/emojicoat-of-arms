@@ -60,13 +60,13 @@ class App extends Component {
 
             <Route
               exact
-              path="/create"
+              path="/Create"
               render={() => <CreateCoatOfArms getEmojisWithSearchTerm={this.getEmojisWithSearchTerm} />}
             />
 
             <Route
               exact
-              path="/gallery"
+              path="/Gallery"
               render={() => <Gallery />}
             />
 
@@ -77,11 +77,7 @@ class App extends Component {
             />
 
           </Switch>
-
         </main>
-
-
-
       </div>
     )
   }
