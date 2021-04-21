@@ -1,0 +1,29 @@
+.home {
+    background: #0E0043;
+}
+
+.upper-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 50px 100px;
+    padding-top: 50px;
+}
+
+.intro {
+    font-size: 2rem;
+    margin: 30px;
+    color: white;
+}
+
+.img-wrapper {
+    width: 220px;
+    border-radius: 10px;
+    background: linear-gradient(#e66465, #9198e5);;
+}
+
+.example {
+    width: 200px;
+    margin: 0 30px;
+
+}
