@@ -73,7 +73,6 @@ class CreateCoatOfArms extends Component {
           </section>
 
           <section className="box-right">
-
             <div className="img-wrapper" style={{backgroundImage: `url(${shield})`}}>
               <div className="emoji-wrapper">
                 {this.state.currentCoatEmojis &&
@@ -83,8 +82,8 @@ class CreateCoatOfArms extends Component {
                 />
                 }
               </div>
-
             </div>
+
             <div className="button-container">
               <Link to='/gallery' onClick={this.clickHandler}>
                 <button className="save-btn">SAVE</button>
