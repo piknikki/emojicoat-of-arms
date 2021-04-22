@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import './CreateCoatOfArms.css'
 import SearchBar from "../SearchBar/SearchBar";
 import Emojis from "../Emojis/Emojis";
-// import Buttons from "../Buttons/Buttons";
 import shield from '../../Assets/shield1.png'
 import {Link} from "react-router-dom";
 

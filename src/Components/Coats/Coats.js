@@ -14,15 +14,6 @@ const Coats = ({ coats }) => {
         </div>
       </div>
     )
-    // return (
-    //     <div className="gallery-cards-container">
-    //       <div className="gallery-img-wrapper" style={{backgroundImage: `url(${shield})`}}>
-    //         <div className="emoji-wrapper">
-    //           <CoatEmojis emojis={coat} />
-    //         </div>
-    //       </div>
-    //     </div>
-    // )
   })
 
   return (
