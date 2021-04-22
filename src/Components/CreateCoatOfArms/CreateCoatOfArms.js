@@ -8,7 +8,6 @@ import shield from '../../Assets/shield1.png'
 import {Link} from "react-router-dom";
 
 class CreateCoatOfArms extends Component {
-  // allows user to create a coat of arms -- probably a controlled form???
   // may also need the ability to select a shield
   // propTypes
   // todo ==> a complete coat of arms includes motto, crest, shield elements (emojis),
@@ -42,6 +41,10 @@ class CreateCoatOfArms extends Component {
       // todo ==> fix this error handling so it won't redirect to gallery
       return this.setState({ error: 'Please enter 5 emojis for your coat of arms.'})
     }
+  }
+
+  clearCurrentCoat = () => {
+    this.setState({  currentCoatEmojis: [] })
   }
 
   render() {
@@ -88,6 +91,7 @@ class CreateCoatOfArms extends Component {
                 {this.state.error &&
                   <h2>{this.state.error}</h2>
                 }
+              <button className="reset-btn" onClick={this.clearCurrentCoat}>Reset</button>
 
               <Link to='/gallery' onClick={this.clickHandler}>
                 <button className="save-btn">SAVE</button>
