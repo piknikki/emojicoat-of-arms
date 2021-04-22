@@ -38,12 +38,6 @@ class CreateCoatOfArms extends Component {
     this.props.saveToGallery(this.state.currentCoatEmojis)
   }
 
-  renderSearchResults = () => {
-    if (this.state.currentCoatEmojis.length < 6) {
-
-    }
-  }
-
   render() {
     return (
       <div>

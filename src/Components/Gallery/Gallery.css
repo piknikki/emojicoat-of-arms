@@ -1,0 +1,40 @@
+.coat-container {
+    margin: 20px auto;
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*.gallery-header {*/
+/*    display: flex;*/
+/*    flex-flow: row nowrap;*/
+/*    justify-content: space-between;*/
+/*    align-items: flex-start;*/
+/*    margin: 40px;*/
+/*    text-align: center;*/
+/*    color: white;*/
+/*}*/
+
+.gallery-cards-container {
+    width: 300px;
+    padding: 20px;
+}
+
+.gallery-img-wrapper {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
+
+.gallery-emoji-wrapper {
+    width: 300px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px 40px;
+    z-index: 10;
+}
