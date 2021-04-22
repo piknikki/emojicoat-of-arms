@@ -4,8 +4,6 @@ import example from '../../Assets/example.png'
 import './Home.css';
 
 const Home = () => {
-  // Landing page component
-
   return (
     <div className="home">
       <div className="upper-container">

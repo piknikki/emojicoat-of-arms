@@ -44,12 +44,13 @@
 
 .button-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin-top: 30px;
 }
 
-.save-btn {
+.save-btn,
+.reset-btn {
     display: block;
     background: #0E0043;
     color: white;
@@ -71,24 +72,5 @@ h3 {
 
 .disabled {
     pointer-events: none;
-}
-
-.coat-container {
-    margin: 40px auto;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.gallery-cards-container {
-    padding: 20px;
-}
-
-.gallery-img-wrapper {
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: relative;
 }
 

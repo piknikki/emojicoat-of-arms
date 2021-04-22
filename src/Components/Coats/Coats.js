@@ -1,21 +1,18 @@
 import React from 'react'
-import Emojis from "../Emojis/Emojis";
-import '../CreateCoatOfArms/CreateCoatOfArms.css'
-// import './Coats.css'
+import CoatEmojis from '../CoatEmojis/CoatEmojis'
+import './Coats.css'
 import shield from "../../Assets/shield1.png";
 
 const Coats = ({ coats }) => {
 
-  const mappedCoats = coats.map(coat => {
-    console.log("ONE COAT ", coat)
+  const mappedCoats = coats.map((coat, index) => {
+    console.log(coat)
     return (
-        <div className="gallery-cards-container">
-          <div className="gallery-img-wrapper" style={{backgroundImage: `url(${shield})`}}>
-            <div className="emoji-wrapper">
-              <Emojis emojis={coat} />
-            </div>
-          </div>
+      <div className="img-wrapper-home" key={index}>
+        <div className="gallery-img-wrapper" style={{backgroundImage: `url(${shield})`}}>
+          <CoatEmojis emojis={coat} />
         </div>
+      </div>
     )
   })
 
