@@ -41,17 +41,22 @@ class CreateCoatOfArms extends Component {
     return (
       <div>
         <SearchBar getEmojisWithSearchTerm={this.getEmojisWithSearchTerm}/>
+        <div className="header">
+          <h3 className="left">Search results</h3>
+          <h3 className="right">Your Emoji Coat of Arms</h3>
+        </div>
         <div className="emojibox">
           <section className="left">
             {this.state.foundEmojis &&
               <Emojis emojis={this.state.foundEmojis} selectEmoji={this.selectEmoji}/>
             }
           </section>
-          <section className="right">
+          <section className="box-right">
+
             <div className="img-wrapper" style={{backgroundImage: `url(${shield})`}}>
               <div className="emoji-wrapper">
                 {this.state.currentCoatEmojis &&
-                <Emojis emojis={this.state.currentCoatEmojis} selectEmoji={this.selectEmoji}/>
+                <Emojis emojis={this.state.currentCoatEmojis} />
                 }
               </div>
 

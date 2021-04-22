@@ -1,17 +1,24 @@
-.emojibox {
+.emojibox,
+.header {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: flex-start;
+    margin: 40px;
+    text-align: center;
+}
+
+.box-right {
+    margin-top: 40px;
+    width: 30%;
 }
 
 .left {
-    width: 80%;
+    width: 70%;
 }
+
 .right {
     width: 30%;
-    margin-right: 3%;
-    margin-top: 20px;
 }
 
 .img-wrapper {
@@ -55,5 +62,10 @@
 
 .save-btn:disabled {
     color: dimgrey;
+}
+
+h3 {
+    color: white;
+    font-size: 1.5rem;
 }
 

@@ -15,8 +15,8 @@ const NavBar = ({ logo }) => {
       </div>
       <div className="navlinks-container">
         <ul>
-          <li><NavLink to="/Create">Create</NavLink></li>
-          <li><NavLink to="/Gallery">Gallery</NavLink></li>
+          <li><NavLink className="navlink" to="/Create">Create</NavLink></li>
+          <li><NavLink className="navlink" to="/Gallery">Gallery</NavLink></li>
         </ul>
 
       </div>
