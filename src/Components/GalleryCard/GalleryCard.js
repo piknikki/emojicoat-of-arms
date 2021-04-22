@@ -1,22 +1,17 @@
 import React from 'react'
-import './EmojiCard.css'
+import './GalleryCard.css'
 
-const EmojiCard = (props) => {
+const GalleryCard = (props) => {
   const {
     slug,
     // name,
     character,
     // group,
     // subGroup,
-    selectEmoji,
-    clickable
   } = props
 
   return (
-    <div
-      className={`emoji-card ${!clickable ? "disabled" : ""}`}
-      onClick={clickable ? () => selectEmoji(props) : undefined}
-    >
+    <div className="gallery-card">
       <figure id={slug}>
         <div className="character" >{character}</div>
         {/*<figcaption>*/}
@@ -28,6 +23,7 @@ const EmojiCard = (props) => {
       </figure>
     </div>
   )
+
 }
 
-export default EmojiCard
+export default GalleryCard

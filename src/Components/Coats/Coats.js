@@ -1,5 +1,5 @@
 import React from 'react'
-import Emojis from "../Emojis/Emojis";
+import CoatEmojis from '../CoatEmojis/CoatEmojis'
 import './Coats.css'
 import shield from "../../Assets/shield1.png";
 
@@ -9,7 +9,7 @@ const Coats = ({ coats }) => {
     return (
       <div className="img-wrapper-home">
         <div className="gallery-img-wrapper" style={{backgroundImage: `url(${shield})`}}>
-          <Emojis emojis={coat} />
+          <CoatEmojis emojis={coat} />
         </div>
       </div>
     )
@@ -17,7 +17,7 @@ const Coats = ({ coats }) => {
     //     <div className="gallery-cards-container">
     //       <div className="gallery-img-wrapper" style={{backgroundImage: `url(${shield})`}}>
     //         <div className="emoji-wrapper">
-    //           <Emojis emojis={coat} />
+    //           <CoatEmojis emojis={coat} />
     //         </div>
     //       </div>
     //     </div>

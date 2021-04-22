@@ -3,7 +3,7 @@ import '../CreateCoatOfArms/CreateCoatOfArms.css'
 // import './Gallery.css'
 import Coats from "../Coats/Coats";
 
-const Gallery = ({ savedCoats, clickable }) => {
+const Gallery = ({ savedCoats }) => {
 
   return (
     <Coats coats={savedCoats}/>
