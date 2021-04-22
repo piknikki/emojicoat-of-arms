@@ -19,7 +19,8 @@ class CreateCoatOfArms extends Component {
     this.state = {
       currentCoatEmojis: [],
       foundEmojis: [],
-      clickable: true
+      clickable: true,
+      error: ''
     }
   }
 
@@ -35,7 +36,12 @@ class CreateCoatOfArms extends Component {
   }
 
   clickHandler = () => {
-    this.props.saveToGallery(this.state.currentCoatEmojis)
+    if (this.state.currentCoatEmojis.length > 0) {
+      return this.props.saveToGallery(this.state.currentCoatEmojis)
+    } else {
+      // todo ==> fix this error handling so it won't redirect to gallery
+      return this.setState({ error: 'Please enter 5 emojis for your coat of arms.'})
+    }
   }
 
   render() {
@@ -79,6 +85,10 @@ class CreateCoatOfArms extends Component {
             </div>
 
             <div className="button-container">
+                {this.state.error &&
+                  <h2>{this.state.error}</h2>
+                }
+
               <Link to='/gallery' onClick={this.clickHandler}>
                 <button className="save-btn">SAVE</button>
               </Link>
