@@ -1,11 +1,33 @@
 import React from 'react';
-import './Gallery.css'
+import '../CreateCoatOfArms/CreateCoatOfArms.css'
+import shield from "../../Assets/shield1.png";
+import Emojis from "../Emojis/Emojis";
 
-const Gallery = () => {
-  // takes all the coats created so far and displays them pleasantly
+const Gallery = ({ savedCoats, clickable }) => {
+  console.log(savedCoats)
+
+  const mappedCoats = savedCoats.map(coat => {
+    return (
+      <Emojis
+        emojis={savedCoats}
+        clickable={!clickable}
+      />
+    )
+  })
 
   return (
-    <h1>Gallery of other Emoji Coat of Arms</h1>
+    <div className="cards-container">
+      <h3>This is where the coats should be</h3>
+
+      <div className="img-wrapper" style={{backgroundImage: `url(${shield})`}}>
+        <div className="emoji-wrapper">
+          {savedCoats &&
+            mappedCoats
+          }
+        </div>
+      </div>
+
+    </div>
   )
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 import EmojiCard from "../EmojiCard/EmojiCard";
 import './Emojis.css'
 
-const Emojis = ({ emojis, selectEmoji }) => {
+const Emojis = ({ emojis, selectEmoji, clickable }) => {
 
   const emojiCards = emojis.map(emoji => {
     return (
@@ -14,6 +14,7 @@ const Emojis = ({ emojis, selectEmoji }) => {
         group={emoji.group}
         subGroup={emoji.subGroup}
         selectEmoji={selectEmoji}
+        clickable={clickable}
       />
     )
   })

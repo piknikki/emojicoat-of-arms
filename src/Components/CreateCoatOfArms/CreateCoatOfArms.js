@@ -18,7 +18,8 @@ class CreateCoatOfArms extends Component {
 
     this.state = {
       currentCoatEmojis: [],
-      foundEmojis: []
+      foundEmojis: [],
+      clickable: true
     }
   }
 
@@ -37,6 +38,12 @@ class CreateCoatOfArms extends Component {
     this.props.saveToGallery(this.state.currentCoatEmojis)
   }
 
+  renderSearchResults = () => {
+    if (this.state.currentCoatEmojis.length < 6) {
+
+    }
+  }
+
   render() {
     return (
       <div>
@@ -45,22 +52,38 @@ class CreateCoatOfArms extends Component {
           <h3 className="left">Search results</h3>
           <h3 className="right">Your Emoji Coat of Arms</h3>
         </div>
+
         <div className="emojibox">
           <section className="left">
-            {this.state.foundEmojis &&
-              <Emojis emojis={this.state.foundEmojis} selectEmoji={this.selectEmoji}/>
+            {this.state.currentCoatEmojis.length === 5 &&
+              <h3 className="feedback">
+                <span>🎉</span>
+                Great selections! Click save to see your Emoji Coat of Arms in the gallery.
+              </h3>
             }
-          </section>
-          <section className="box-right">
 
+            {this.state.foundEmojis && this.state.currentCoatEmojis.length < 5 &&
+              <Emojis
+                emojis={this.state.foundEmojis}
+                selectEmoji={this.selectEmoji}
+                clickable={this.state.clickable}
+              />
+            }
+
+          </section>
+
+          <section className="box-right">
             <div className="img-wrapper" style={{backgroundImage: `url(${shield})`}}>
               <div className="emoji-wrapper">
                 {this.state.currentCoatEmojis &&
-                <Emojis emojis={this.state.currentCoatEmojis} />
+                <Emojis
+                  emojis={this.state.currentCoatEmojis}
+                  clickable={!this.state.clickable}
+                />
                 }
               </div>
-
             </div>
+
             <div className="button-container">
               <Link to='/gallery' onClick={this.clickHandler}>
                 <button className="save-btn">SAVE</button>

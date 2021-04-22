@@ -9,12 +9,17 @@ const EmojiCard = (props) => {
     character,
     // group,
     // subGroup,
-    selectEmoji } = props
+    selectEmoji,
+    clickable
+  } = props
 
   return (
-    <div className="emoji-card" onClick={() => selectEmoji(props)}>
+    <div
+      className={`emoji-card ${!clickable ? "disabled" : ""}`}
+      onClick={clickable ? () => selectEmoji(props) : undefined}
+    >
       <figure id={slug}>
-        <div className="character">{character}</div>
+        <div className="character" >{character}</div>
         {/*<figcaption>*/}
         {/*  <h4>Name: {name}</h4>*/}
         {/*  <h5>Group: {group}</h5>*/}
