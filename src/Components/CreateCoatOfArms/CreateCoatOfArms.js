@@ -18,7 +18,8 @@ class CreateCoatOfArms extends Component {
 
     this.state = {
       currentCoatEmojis: [],
-      foundEmojis: []
+      foundEmojis: [],
+      clickable: true
     }
   }
 
@@ -48,7 +49,11 @@ class CreateCoatOfArms extends Component {
         <div className="emojibox">
           <section className="left">
             {this.state.foundEmojis &&
-              <Emojis emojis={this.state.foundEmojis} selectEmoji={this.selectEmoji}/>
+              <Emojis
+                emojis={this.state.foundEmojis}
+                selectEmoji={this.selectEmoji}
+                clickable={this.state.clickable}
+              />
             }
           </section>
           <section className="box-right">
@@ -56,7 +61,10 @@ class CreateCoatOfArms extends Component {
             <div className="img-wrapper" style={{backgroundImage: `url(${shield})`}}>
               <div className="emoji-wrapper">
                 {this.state.currentCoatEmojis &&
-                <Emojis emojis={this.state.currentCoatEmojis} />
+                <Emojis
+                  emojis={this.state.currentCoatEmojis}
+                  clickable={!this.state.clickable}
+                />
                 }
               </div>
 
