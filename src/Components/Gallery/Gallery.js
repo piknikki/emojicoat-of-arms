@@ -4,7 +4,6 @@ import '../CreateCoatOfArms/CreateCoatOfArms.css'
 import Coats from "../Coats/Coats";
 
 const Gallery = ({ savedCoats, clickable }) => {
-  console.log(savedCoats)
 
   return (
     <Coats coats={savedCoats}/>
