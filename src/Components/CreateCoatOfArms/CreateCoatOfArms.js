@@ -38,6 +38,12 @@ class CreateCoatOfArms extends Component {
     this.props.saveToGallery(this.state.currentCoatEmojis)
   }
 
+  renderSearchResults = () => {
+    if (this.state.currentCoatEmojis.length < 6) {
+
+    }
+  }
+
   render() {
     return (
       <div>
@@ -46,16 +52,26 @@ class CreateCoatOfArms extends Component {
           <h3 className="left">Search results</h3>
           <h3 className="right">Your Emoji Coat of Arms</h3>
         </div>
+
         <div className="emojibox">
           <section className="left">
-            {this.state.foundEmojis &&
+            {this.state.currentCoatEmojis.length === 5 &&
+              <h3 className="feedback">
+                <span>🎉</span>
+                Great selections! Click save to see your Emoji Coat of Arms in the gallery.
+              </h3>
+            }
+
+            {this.state.foundEmojis && this.state.currentCoatEmojis.length < 5 &&
               <Emojis
                 emojis={this.state.foundEmojis}
                 selectEmoji={this.selectEmoji}
                 clickable={this.state.clickable}
               />
             }
+
           </section>
+
           <section className="box-right">
 
             <div className="img-wrapper" style={{backgroundImage: `url(${shield})`}}>

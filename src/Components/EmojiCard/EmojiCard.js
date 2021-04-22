@@ -15,7 +15,6 @@ const EmojiCard = (props) => {
 
   return (
     <div
-      // className="emoji-card"
       className={`emoji-card ${!clickable ? "disabled" : ""}`}
       onClick={clickable ? () => selectEmoji(props) : undefined}
     >
