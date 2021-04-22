@@ -1,4 +1,4 @@
-.gallery-cards-container {
+.coat-container {
     margin: 20px auto;
     width: 80%;
     display: flex;
@@ -7,18 +7,22 @@
     align-items: center;
 }
 
-.gallery-header {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 40px;
-    text-align: center;
-    color: white;
+/*.gallery-header {*/
+/*    display: flex;*/
+/*    flex-flow: row nowrap;*/
+/*    justify-content: space-between;*/
+/*    align-items: flex-start;*/
+/*    margin: 40px;*/
+/*    text-align: center;*/
+/*    color: white;*/
+/*}*/
+
+.gallery-cards-container {
+    width: 300px;
+    padding: 20px;
 }
 
 .gallery-img-wrapper {
-    height: 40vh;
     background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
@@ -26,10 +30,11 @@
 }
 
 .gallery-emoji-wrapper {
+    width: 300px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
-    margin: 0 40px;
+    margin: 20px 40px;
     z-index: 10;
 }

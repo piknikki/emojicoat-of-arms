@@ -33,9 +33,7 @@ class App extends Component {
   }
 
   saveToGallery = (emojis) => {
-    console.log(emojis)
     this.setState({ savedCoats: [...this.state.savedCoats, emojis] })
-    console.log(this.state.savedCoats)
   }
 
   render() {
