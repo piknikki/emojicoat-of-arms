@@ -2,6 +2,7 @@ import React from 'react'
 import './EmojiCard.css'
 
 const EmojiCard = (props) => {
+
   const {
     id,
     slug,
@@ -15,12 +16,14 @@ const EmojiCard = (props) => {
     removeEmojiFromCurrentCoat
   } = props
 
-  console.log("EMOJI CARD ID: ", id)
+  const cardId = `${slug}-${id}`
+  console.log("card id: ", cardId)
+
   return (
     <div
       className="emoji-card"
       onClick={clickable ? () => selectEmoji(props) : undefined}
-      onDoubleClick={removable ? () => removeEmojiFromCurrentCoat(id) : undefined}
+      onDoubleClick={removable ? () => removeEmojiFromCurrentCoat(slug) : undefined}
     >
       <figure id={slug}>
         <div className="character" >{character}</div>

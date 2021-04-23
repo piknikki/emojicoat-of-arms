@@ -7,18 +7,20 @@
     font-size: 0.8rem;
 }
 
-.img-wrapper-home {
-    width: 300px;
+.coat-wrapper {
+    height: 280px;
     padding: 8px;
-    margin: 20px;
     border-radius: 10px;
     position: relative;
     background: linear-gradient(#e66465, #9198e5);;
 }
 
 .gallery-img-wrapper {
+    height: 240px;
     background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;
 }
+
+

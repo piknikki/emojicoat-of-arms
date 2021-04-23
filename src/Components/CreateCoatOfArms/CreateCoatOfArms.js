@@ -31,8 +31,8 @@ class CreateCoatOfArms extends Component {
   }
 
   selectEmoji = (emoji) => {
-    this.setState({ currentCoatEmojis: [...this.state.currentCoatEmojis, emoji] })
     console.log(emoji)
+    this.setState({ currentCoatEmojis: [...this.state.currentCoatEmojis, emoji] })
   }
 
   clickHandler = () => {
@@ -44,10 +44,11 @@ class CreateCoatOfArms extends Component {
     }
   }
 
-  removeEmojiFromCurrentCoat = (id) => {
-    console.log(id)
-    this.setState({ currentCoatEmojis: this.state.currentCoatEmojis.filter(emoji => emoji.id !== id)})
-    console.log(this.state.currentCoatEmojis)
+  removeEmojiFromCurrentCoat = (slug) => {
+    // console.log(obj)
+    // todo ==> find/filter fucked???
+    this.setState({ currentCoatEmojis: this.state.currentCoatEmojis.filter(emoji => emoji.slug !== slug)})
+
   }
 
   clearCurrentCoat = () => {

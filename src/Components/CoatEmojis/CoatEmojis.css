@@ -1,6 +1,7 @@
 .gallery-cards-container {
     margin: 10px auto;
-    width: 70%;
+    width: 300px;
+    padding: 20px 80px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;

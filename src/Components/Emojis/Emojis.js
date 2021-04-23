@@ -1,16 +1,15 @@
 import React from 'react'
-import { v4 as uuidv4 } from 'uuid';
+// import { v4 as uuidv4 } from 'uuid';
 import EmojiCard from "../EmojiCard/EmojiCard";
 import './Emojis.css'
 
 const Emojis = ({ emojis, selectEmoji, clickable, removable, removeEmojiFromCurrentCoat }) => {
 
-  const emojiCards = emojis.map(emoji => {
-    const emojiKey = uuidv4()
+  const emojiCards = emojis.map((emoji, index) => {
     return (
       <EmojiCard
-        key={emojiKey}
-        id={emojiKey}
+        key={`${emoji.slug}-${index}`}
+        id={`${index}`}
         slug={emoji.slug}
         name={emoji.unicodeName}
         character={emoji.character}
