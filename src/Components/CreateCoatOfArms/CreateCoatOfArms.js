@@ -46,7 +46,6 @@ class CreateCoatOfArms extends Component {
 
   removeEmojiFromCurrentCoat = (slug) => {
     // console.log(obj)
-    // todo ==> find/filter fucked???
     this.setState({ currentCoatEmojis: this.state.currentCoatEmojis.filter(emoji => emoji.slug !== slug)})
 
   }
