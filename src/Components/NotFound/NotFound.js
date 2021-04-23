@@ -14,7 +14,7 @@ const NoRoute = () => {
           Might as well check out some inspiration
         </p>
 
-        <Link to="/gallery" className="lnk">
+        <Link to="/Gallery" className="lnk">
           <button className="btn">
             <span className="sparkles">✨</span>
             Gallery

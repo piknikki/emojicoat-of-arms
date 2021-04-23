@@ -18,6 +18,7 @@ export default class SearchBar extends Component {
   submitHandler = (event) => {
     event.preventDefault()
     this.props.getEmojisWithSearchTerm(this.state.searchTerm)
+    this.setState({ searchTerm: '' })
   }
 
   render() {
