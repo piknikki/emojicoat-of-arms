@@ -1,6 +1,11 @@
 describe('Emoji Coat of Arms', () => {
 
   beforeEach(() => {
+    cy.intercept({
+      method: 'GET',
+      url: ''
+    })
+
     cy.visit('http://localhost:3000')
   })
 

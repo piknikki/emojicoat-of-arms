@@ -56,7 +56,7 @@ class CreateCoatOfArms extends Component {
         </div>
 
         <div className="emojibox">
-          <section className="left">
+          <section className="box-left">
             {this.state.currentCoatEmojis.length === 5 &&
               <h3 className="feedback">
                 <span>🎉</span>

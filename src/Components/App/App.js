@@ -22,6 +22,8 @@ class App extends Component {
   }
 
   componentDidMount() {
+    // this fetch is to find a random emoji for the navbar
+    // todo ==> maybe do this and then store it in local storage and/or find a way to make it faster
     fetch(`https://emoji-api.com/emojis?search=grin&access_key=ccd4ba88d6d80505f138b2e3e97bd3da9fe0dbf5`)
       .then(response => response.json())
       .then(logoEmojis => {
@@ -39,7 +41,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <NavBar logo={this.state.currentEmoji}/>
+        <NavBar logo={this.state.currentEmoji ? this.state.currentEmoji : "😆"}/>
         <main>
           {!!this.state.error &&
           <h2 className="error-feedback">{this.state.error}</h2>
