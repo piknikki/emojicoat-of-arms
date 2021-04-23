@@ -4,7 +4,6 @@ import './EmojiCard.css'
 const EmojiCard = (props) => {
 
   const {
-    id,
     slug,
     // name,
     character,
@@ -15,9 +14,6 @@ const EmojiCard = (props) => {
     removable,
     removeEmojiFromCurrentCoat
   } = props
-
-  const cardId = `${slug}-${id}`
-  console.log("card id: ", cardId)
 
   return (
     <div
