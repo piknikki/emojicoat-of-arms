@@ -29,7 +29,7 @@
 }
 
 .img-wrapper {
-    height: 40vh;
+    height: 340px;
     background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
@@ -81,7 +81,7 @@ h3 {
     margin: 40px;
 }
 
-.disabled {
-    pointer-events: none;
+.instructions {
+    font-size: 0.9rem;
+    display: block;
 }
-

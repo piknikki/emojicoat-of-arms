@@ -2,20 +2,28 @@ import React from 'react'
 import './EmojiCard.css'
 
 const EmojiCard = (props) => {
+
   const {
+    id,
     slug,
     // name,
     character,
     // group,
     // subGroup,
     selectEmoji,
-    clickable
+    clickable,
+    removable,
+    removeEmojiFromCurrentCoat
   } = props
+
+  const cardId = `${slug}-${id}`
+  console.log("card id: ", cardId)
 
   return (
     <div
-      className={`emoji-card ${!clickable ? "disabled" : ""}`}
+      className="emoji-card"
       onClick={clickable ? () => selectEmoji(props) : undefined}
+      onDoubleClick={removable ? () => removeEmojiFromCurrentCoat(slug) : undefined}
     >
       <figure id={slug}>
         <div className="character" >{character}</div>

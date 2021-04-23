@@ -24,12 +24,12 @@ export default class SearchBar extends Component {
 
     return (
       <div className="searchbar-container">
-        <p className="search-subtitle">A complete coat of arms includes motto, crest, shield elements (emojis), and supporters</p>
+        <p className="search-subtitle">Search to find your favorite emojis.</p>
         <form className="search-form">
           <label>
             <input
               type="text"
-              placeholder="First, search for emojis . . . "
+              placeholder="ex: unicorn "
               name="searchTerm"
               onChange={this.changeHandler}
             />
