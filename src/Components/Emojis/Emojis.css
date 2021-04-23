@@ -1,6 +1,6 @@
 .cards-container {
     margin: 20px auto;
-    width: 250px;
+    width: 70%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
