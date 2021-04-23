@@ -81,6 +81,7 @@ class App extends Component {
             <Route
               exact
               path="/Gallery"
+              // render={() => <Gallery savedCoats={this.checkForSaved}/>}
               render={() => <Gallery savedCoats={this.state.savedCoats}/>}
               // render={() => <Gallery savedCoats={this.state.savedCoats.length > 0 ?  this.state.savedCoats : JSON.parse(localStorage.getItem('savedCoats')) }/>}
             />

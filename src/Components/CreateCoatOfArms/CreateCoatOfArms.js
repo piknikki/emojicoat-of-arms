@@ -103,7 +103,7 @@ class CreateCoatOfArms extends Component {
                 }
               <button className="reset-btn" onClick={this.clearCurrentCoat}>Reset</button>
 
-              <Link to='/gallery' onClick={this.clickHandler}>
+              <Link to='/Gallery' onClick={this.clickHandler}>
                 <button className="save-btn">SAVE</button>
               </Link>
             </div>
