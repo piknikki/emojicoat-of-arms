@@ -1,6 +1,11 @@
 describe('Emoji Coat of Arms', () => {
 
   beforeEach(() => {
+    cy.intercept({
+      method: 'GET',
+      url: ''
+    })
+
     cy.visit('http://localhost:3000')
   })
 
@@ -28,13 +33,13 @@ describe('Emoji Coat of Arms', () => {
 
 })
 
-describe('Create a new Coat of Arms Form', () => {
+describe('Search for emojis', () => {
 
   beforeEach(() => {
     cy.visit('http://localhost:3000')
   })
 
-  it('Should go to Create using Get Started button', () => {
+  it('Should return a list of matching emojis when using a search term', () => {
     cy.get('.start-btn').contains('Get Started Now').click()
     cy.get('input[name="searchTerm"]').type('cowboy')
       .should('have.value', 'cowboy')
@@ -43,7 +48,7 @@ describe('Create a new Coat of Arms Form', () => {
   })
 })
 
-describe('Create a new Coat of Arms', () => {
+describe('Create a new Coat of Arms by clicking on emojis', () => {
 
   beforeEach(() => {
     cy.visit('http://localhost:3000')
@@ -70,3 +75,16 @@ describe('Create a new Coat of Arms', () => {
 
 })
 
+describe('404 Not Found', () => {
+
+  beforeEach(() => {
+    cy.visit('http://localhost:3000/xyz')
+  })
+
+  it('Should show a 404 page', () => {
+    cy.get('.oops').contains('404')
+    cy.get('.btn').contains('Gallery').click()
+    cy.get('.coat-container').should('exist')
+  })
+
+})
