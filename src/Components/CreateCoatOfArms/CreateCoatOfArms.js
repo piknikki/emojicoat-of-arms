@@ -18,6 +18,7 @@ class CreateCoatOfArms extends Component {
       currentCoatEmojis: [],
       foundEmojis: [],
       clickable: true,
+      removable: false,
       error: ''
     }
   }
@@ -31,6 +32,7 @@ class CreateCoatOfArms extends Component {
 
   selectEmoji = (emoji) => {
     this.setState({ currentCoatEmojis: [...this.state.currentCoatEmojis, emoji] })
+    console.log(emoji)
   }
 
   clickHandler = () => {
@@ -42,6 +44,12 @@ class CreateCoatOfArms extends Component {
     }
   }
 
+  removeEmojiFromCurrentCoat = (id) => {
+    console.log(id)
+    this.setState({ currentCoatEmojis: this.state.currentCoatEmojis.filter(emoji => emoji.id !== id)})
+    console.log(this.state.currentCoatEmojis)
+  }
+
   clearCurrentCoat = () => {
     this.setState({  currentCoatEmojis: [] })
   }
@@ -51,8 +59,8 @@ class CreateCoatOfArms extends Component {
       <div>
         <SearchBar getEmojisWithSearchTerm={this.getEmojisWithSearchTerm}/>
         <div className="header">
-          <h3 className="left">Search results</h3>
-          <h3 className="right">Your Emoji Coat of Arms</h3>
+          <h3 className="left">Search results <span className="instructions">(Single click to add an emoji)</span></h3>
+          <h3 className="right">Your Emoji Coat of Arms <span className="instructions">(Double click to remove an emoji)</span></h3>
         </div>
 
         <div className="emojibox">
@@ -69,6 +77,7 @@ class CreateCoatOfArms extends Component {
                 emojis={this.state.foundEmojis}
                 selectEmoji={this.selectEmoji}
                 clickable={this.state.clickable}
+                removable={this.state.removable}
               />
             }
 
@@ -81,6 +90,8 @@ class CreateCoatOfArms extends Component {
                 <Emojis
                   emojis={this.state.currentCoatEmojis}
                   clickable={!this.state.clickable}
+                  removable={!this.state.removable}
+                  removeEmojiFromCurrentCoat={this.removeEmojiFromCurrentCoat}
                 />
                 }
               </div>
