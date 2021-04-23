@@ -70,3 +70,16 @@ describe('Create a new Coat of Arms by clicking on emojis', () => {
 
 })
 
+describe('404 Not Found', () => {
+
+  beforeEach(() => {
+    cy.visit('http://localhost:3000/xyz')
+  })
+
+  it('Should show a 404 page', () => {
+    cy.get('.oops').contains('404')
+    cy.get('.btn').contains('Gallery').click()
+    cy.get('.coat-container').should('exist')
+  })
+
+})
