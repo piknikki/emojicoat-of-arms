@@ -32,8 +32,11 @@ form input[type=text] {
     font-family: 'Montserrat', sans-serif;
 }
 
-input:active {
-    border: none;
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
 }
 
 form button.searchBtn {

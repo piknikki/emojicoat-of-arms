@@ -16,7 +16,7 @@ class CreateCoatOfArms extends Component {
 
     this.state = {
       currentCoatEmojis: [],
-      foundEmojis: [],
+      foundEmojis: this.props.foundEmojis,
       clickable: true,
       removable: false,
       error: ''
@@ -59,8 +59,30 @@ class CreateCoatOfArms extends Component {
       <div>
         <SearchBar getEmojisWithSearchTerm={this.getEmojisWithSearchTerm}/>
         <div className="header">
-          <h3 className="left">Search results <span className="instructions">(Single click to add an emoji)</span></h3>
-          <h3 className="right">Your Emoji Coat of Arms <span className="instructions">(Double click to remove an emoji)</span></h3>
+          <h3 className="left">
+            Search results
+            <span className="instructions">(Single click to add an emoji)</span>
+            <span>You have {this.state.currentCoatEmojis.length}/5 emojis chosen</span>
+          </h3>
+          <div className="right">
+            <h3>
+              Your Emoji Coat of Arms
+              <span className="instructions">(Double click to remove an emoji)</span>
+            </h3>
+            <div className="button-container">
+              {this.state.error &&
+              <h2>{this.state.error}</h2>
+              }
+
+              <button className="reset-btn" onClick={this.clearCurrentCoat}>Reset</button>
+
+              <Link to='/Gallery' onClick={this.clickHandler}>
+                <button className="save-btn">Save</button>
+              </Link>
+            </div>
+          </div>
+
+
         </div>
 
         <div className="emojibox">
@@ -95,17 +117,6 @@ class CreateCoatOfArms extends Component {
                 />
                 }
               </div>
-            </div>
-
-            <div className="button-container">
-                {this.state.error &&
-                  <h2>{this.state.error}</h2>
-                }
-              <button className="reset-btn" onClick={this.clearCurrentCoat}>Reset</button>
-
-              <Link to='/gallery' onClick={this.clickHandler}>
-                <button className="save-btn">SAVE</button>
-              </Link>
             </div>
           </section>
         </div>
