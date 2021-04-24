@@ -85,3 +85,18 @@ h3 {
     font-size: 0.9rem;
     display: block;
 }
+
+.gallery-feedback {
+    margin: 40px;
+    text-align: center;
+}
+
+.gallery-start-btn {
+    margin: 30px;
+    background: #0E0043;
+    color: white;
+    line-height: 1.2;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1.5em;
+}
