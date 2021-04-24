@@ -15,14 +15,12 @@ class App extends Component {
       savedCoats: [],
       currentCoat: {},
       logoEmojis: [],
-      foundEmojis: [],
       currentEmoji: '',
       error: ''
     }
   }
 
   async componentDidMount() {
-    // this fetch is to find a random emoji for the navbar
     // todo ==> maybe do this and then store it in local storage and/or find a way to make it faster
     const response = await fetch(`https://emoji-api.com/emojis?search=grin&access_key=ccd4ba88d6d80505f138b2e3e97bd3da9fe0dbf5`)
     const json = await response.json()
@@ -30,7 +28,6 @@ class App extends Component {
     this.setState({ logoEmojis: json })
     const logoIndex = Math.floor(Math.random() * 14)
     this.setState({ currentEmoji: this.state.logoEmojis[logoIndex] })
-
   }
 
   saveToGallery = async (emojis) => {
@@ -42,16 +39,18 @@ class App extends Component {
     }
   }
 
-  // checkForSaved = () => {
-  //   const storage = JSON.parse(localStorage.getItem('savedCoats'))
-  //
-  //   if (storage) {
-  //     console.log(storage)
-  //     return storage
-  //   } else {
-  //     return this.state.savedCoats
-  //   }
-  // }
+  checkForSaved = () => {
+    const storage = JSON.parse(localStorage.getItem('savedCoats'))
+
+    if (this.state.savedCoats.length > 0) {
+      return this.state.savedCoats
+    } else if (storage) {
+      console.log(storage)
+      return storage
+    } else {
+
+    }
+  }
 
   render() {
     return (
@@ -73,7 +72,7 @@ class App extends Component {
               exact
               path="/Create"
               render={() => <CreateCoatOfArms
-                foundEmojis={this.state.foundEmojis}
+                foundEmojis={this.state.logoEmojis}
                 saveToGallery={this.saveToGallery}
               />}
             />
@@ -82,8 +81,8 @@ class App extends Component {
               exact
               path="/Gallery"
               // render={() => <Gallery savedCoats={this.checkForSaved}/>}
-              render={() => <Gallery savedCoats={this.state.savedCoats}/>}
-              // render={() => <Gallery savedCoats={this.state.savedCoats.length > 0 ?  this.state.savedCoats : JSON.parse(localStorage.getItem('savedCoats')) }/>}
+              // render={() => <Gallery savedCoats={this.state.savedCoats}/>}
+              render={() => <Gallery savedCoats={this.state.savedCoats.length > 0 ?  this.state.savedCoats : JSON.parse(localStorage.getItem('savedCoats')) }/>}
             />
 
             <Route

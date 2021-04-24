@@ -98,13 +98,13 @@ class CreateCoatOfArms extends Component {
             </div>
 
             <div className="button-container">
-                {this.state.error &&
-                  <h2>{this.state.error}</h2>
-                }
+              {this.state.error &&
+              <h2>{this.state.error}</h2>
+              }
               <button className="reset-btn" onClick={this.clearCurrentCoat}>Reset</button>
 
               <Link to='/Gallery' onClick={this.clickHandler}>
-                <button className="save-btn">SAVE</button>
+                <button className="save-btn">Save</button>
               </Link>
             </div>
           </section>

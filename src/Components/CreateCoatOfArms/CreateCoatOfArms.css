@@ -9,23 +9,23 @@
 }
 
 .left {
-    width: 70%;
+    width: 700px;
     margin: 40px 20px;
 }
 
 .right {
-    width: 30%;
+    width: 300px;
     margin: 40px 20px;
 }
 
 .box-left {
-    width: 70%;
+    width: 700px;
     margin: 0 20px;
 }
 
 .box-right {
     margin-top: 40px;
-    width: 30%;
+    width: 300px;
 }
 
 .img-wrapper {
