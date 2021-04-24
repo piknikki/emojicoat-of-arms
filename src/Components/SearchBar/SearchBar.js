@@ -30,7 +30,7 @@ export default class SearchBar extends Component {
           <label>
             <input
               type="text"
-              placeholder="ex: unicorn "
+              placeholder="ex: grin "
               name="searchTerm"
               onChange={this.changeHandler}
             />

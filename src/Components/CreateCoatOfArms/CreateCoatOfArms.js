@@ -16,7 +16,7 @@ class CreateCoatOfArms extends Component {
 
     this.state = {
       currentCoatEmojis: [],
-      foundEmojis: [],
+      foundEmojis: this.props.foundEmojis,
       clickable: true,
       removable: false,
       error: ''
@@ -72,7 +72,7 @@ class CreateCoatOfArms extends Component {
               </h3>
             }
 
-            {this.state.foundEmojis && this.state.currentCoatEmojis.length < 5 &&
+            {this.state.foundEmojis &&
               <Emojis
                 emojis={this.state.foundEmojis}
                 selectEmoji={this.selectEmoji}
