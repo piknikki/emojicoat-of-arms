@@ -9,23 +9,27 @@
 }
 
 .left {
-    width: 700px;
+    /*width: 700px;*/
+    width: 70%;
     margin: 40px 20px;
 }
 
 .right {
-    width: 300px;
+    /*width: 300px;*/
+    width: 30%;
     margin: 40px 20px;
 }
 
 .box-left {
-    width: 700px;
+    /*width: 700px;*/
+    width: 70%;
     margin: 0 20px;
 }
 
 .box-right {
     margin-top: 40px;
-    width: 300px;
+    /*width: 300px;*/
+    width: 30%;
 }
 
 .img-wrapper {
@@ -54,6 +58,10 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 30px;
+
+    /*flex-flow: column nowrap;*/
+    /*justify-content: space-evenly;*/
+    /*align-items: center;*/
 }
 
 .save-btn,
