@@ -26,9 +26,10 @@ describe('Emoji Coat of Arms', () => {
     cy.get('.searchBtn').contains('Submit')
   })
 
-  it('Should go to Gallery using Gallery NavBar link', () => {
+  it('Should go to Gallery using Gallery NavBar link -- gallery empty', () => {
     cy.get('a').contains('Gallery').click()
-    cy.get('.coat-container').should('exist')
+    cy.get('.gallery-feedback').should('contain', 'clean slate to make something great')
+    cy.get('.gallery-start-btn').should('exist')
   })
 
 })
