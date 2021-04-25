@@ -62,7 +62,7 @@ class CreateCoatOfArms extends Component {
           <h3 className="left">
             Search results
             <span className="instructions">(Single click to add an emoji)</span>
-            <span>You have {this.state.currentCoatEmojis.length}/5 emojis chosen</span>
+            <button className="counter-btn" disabled>{this.state.currentCoatEmojis.length}/5</button>
           </h3>
           <div className="right">
             <h3>
