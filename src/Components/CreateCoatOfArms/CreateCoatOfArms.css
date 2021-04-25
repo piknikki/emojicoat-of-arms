@@ -121,3 +121,10 @@ h3 {
         margin: 0 40px 0 -10px;
     }
 }
+
+@media (max-width: 1000px), screen and (orientation: portrait) {
+    .emoji-wrapper {
+        width: 200px;
+        margin-left: 10px;
+    }
+}
