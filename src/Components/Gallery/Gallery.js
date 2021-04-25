@@ -7,7 +7,17 @@ const Gallery = ({ savedCoats }) => {
 
   return (
     <div className="gallery-feedback">
-      {savedCoats ? <Coats coats={savedCoats}/> :
+      {savedCoats ?
+        <div>
+          <Coats coats={savedCoats}/>
+          <Link to="/create" >
+            <button className="gallery-start-btn">
+              Make more!!
+              <span className="toolbox">🧰</span>
+            </button>
+          </Link>
+        </div>
+        :
         <div>
           <h3>Looks like you've got a clean slate to make something great! </h3>
           <Link to="/create" >

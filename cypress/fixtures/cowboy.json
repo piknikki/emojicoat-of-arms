@@ -1,0 +1,20 @@
+{
+  "cowboy": [
+    {
+      "slug": "cowboy-hat-face",
+      "character": "🤠",
+      "unicodeName": "cowboy hat face",
+      "codePoint": "1F920",
+      "group": "smileys-emotion",
+      "subGroup": "face-hat"
+    },
+    {
+      "slug": "e3-0-cowboy-hat-face",
+      "character": "🤠",
+      "unicodeName": "E3.0 cowboy hat face",
+      "codePoint": "1F920",
+      "group": "smileys-emotion",
+      "subGroup": "face-hat"
+    }
+  ]
+}
