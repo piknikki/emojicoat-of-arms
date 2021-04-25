@@ -1,10 +1,5 @@
 describe('Basic render and navigation', () => {
   beforeEach(() => {
-    cy.intercept({
-      method: 'GET',
-      url: ''
-    })
-
     cy.visit('http://localhost:3000')
   })
 
@@ -34,6 +29,11 @@ describe('Basic render and navigation', () => {
 
 describe('Search for emojis', () => {
   beforeEach(() => {
+    const url = 'https://emoji-api.com/emojis?search=cowboy&access_key=ccd4ba88d6d80505f138b2e3e97bd3da9fe0dbf5'
+    cy.intercept({
+      method: 'GET',
+      url ,
+      fixture: 'cowboy.json'})
     cy.visit('http://localhost:3000')
   })
 
@@ -48,6 +48,11 @@ describe('Search for emojis', () => {
 
 describe('Create a new Coat of Arms by clicking on emojis', () => {
   beforeEach(() => {
+    const url = 'https://emoji-api.com/emojis?search=heart&access_key=ccd4ba88d6d80505f138b2e3e97bd3da9fe0dbf5'
+    cy.intercept({
+      method: 'GET',
+      url ,
+      fixture: 'hearts.json'})
     cy.visit('http://localhost:3000')
   })
 
@@ -58,10 +63,10 @@ describe('Create a new Coat of Arms by clicking on emojis', () => {
     cy.get('.searchBtn').contains('Submit').click()
     cy.get('.cards-container').find('.emoji-card').should('have.length', 55)
     cy.get('.emoji-card>#smiling-face-with-hearts').click()
-    cy.get('.emoji-card>#anatomical-heart').click()
+    cy.get('.emoji-card>#smiling-face-with-heart-eyes').click()
     cy.get('.emoji-card>#smiling-cat-with-heart-eyes').click()
-    cy.get('.emoji-card>#purple-heart').click()
-    cy.get('.emoji-card>#black-heart').click()
+    cy.get('.emoji-card>#heart-with-arrow').click()
+    cy.get('.emoji-card>#heart-with-ribbon').click()
 
     cy.get('.feedback').contains('Great selections!')
     cy.get('.save-btn').contains('Save').click()
@@ -88,7 +93,7 @@ describe('Reset button on creating a coat', () => {
     cy.visit('http://localhost:3000/Create')
   })
 
-  it.only('Should reset coat by clicking reset button', () => {
+  it('Should reset coat by clicking reset button', () => {
     cy.get('.emoji-wrapper').children('.cards-container').should('be.empty')
 
     cy.get('input[name="searchTerm"]').type('heart')

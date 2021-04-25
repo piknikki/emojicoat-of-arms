@@ -1,0 +1,108 @@
+{
+  "hearts": [
+    {
+      "slug": "smiling-face-with-hearts",
+      "character": "🥰",
+      "unicodeName": "smiling face with hearts",
+      "codePoint": "1F970",
+      "group": "smileys-emotion",
+      "subGroup": "face-affection"
+    },
+    {
+      "slug": "smiling-face-with-heart-eyes",
+      "character": "😍",
+      "unicodeName": "smiling face with heart-eyes",
+      "codePoint": "1F60D",
+      "group": "smileys-emotion",
+      "subGroup": "face-affection"
+    },
+    {
+      "slug": "smiling-cat-with-heart-eyes",
+      "character": "😻",
+      "unicodeName": "smiling cat with heart-eyes",
+      "codePoint": "1F63B",
+      "group": "smileys-emotion",
+      "subGroup": "cat-face"
+    },
+    {
+      "slug": "heart-with-arrow",
+      "character": "💘",
+      "unicodeName": "heart with arrow",
+      "codePoint": "1F498",
+      "group": "smileys-emotion",
+      "subGroup": "emotion"
+    },
+    {
+      "slug": "heart-with-ribbon",
+      "character": "💝",
+      "unicodeName": "heart with ribbon",
+      "codePoint": "1F49D",
+      "group": "smileys-emotion",
+      "subGroup": "emotion"
+    },
+    {
+      "slug": "sparkling-heart",
+      "character": "💖",
+      "unicodeName": "sparkling heart",
+      "codePoint": "1F496",
+      "group": "smileys-emotion",
+      "subGroup": "emotion"
+    },
+    {
+      "slug": "growing-heart",
+      "character": "💗",
+      "unicodeName": "growing heart",
+      "codePoint": "1F497",
+      "group": "smileys-emotion",
+      "subGroup": "emotion"
+    },
+    {
+      "slug": "beating-heart",
+      "character": "💓",
+      "unicodeName": "beating heart",
+      "codePoint": "1F493",
+      "group": "smileys-emotion",
+      "subGroup": "emotion"
+    },
+    {
+      "slug": "revolving-hearts",
+      "character": "💞",
+      "unicodeName": "revolving hearts",
+      "codePoint": "1F49E",
+      "group": "smileys-emotion",
+      "subGroup": "emotion"
+    },
+    {
+      "slug": "two-hearts",
+      "character": "💕",
+      "unicodeName": "two hearts",
+      "codePoint": "1F495",
+      "group": "smileys-emotion",
+      "subGroup": "emotion"
+    },
+    {
+      "slug": "heart-decoration",
+      "character": "💟",
+      "unicodeName": "heart decoration",
+      "codePoint": "1F49F",
+      "group": "smileys-emotion",
+      "subGroup": "emotion"
+    },
+    {
+      "slug": "heart-exclamation",
+      "character": "❣️",
+      "unicodeName": "heart exclamation",
+      "codePoint": "2763 FE0F",
+      "group": "smileys-emotion",
+      "subGroup": "emotion"
+    },
+    {
+      "slug": "broken-heart",
+      "character": "💔",
+      "unicodeName": "broken heart",
+      "codePoint": "1F494",
+      "group": "smileys-emotion",
+      "subGroup": "emotion"
+    }
+  ]
+}
