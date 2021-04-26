@@ -46,7 +46,13 @@ to improve.
 
 ## Some screen shots and gifs
 
-https://user-images.githubusercontent.com/28355326/116083796-4a5fec80-a65a-11eb-8c47-df9d2880c81d.mp4
+
+https://user-images.githubusercontent.com/28355326/116085478-171e5d00-a65c-11eb-89fa-e736acbde2d9.mp4
+
+
+
+https://user-images.githubusercontent.com/28355326/116085495-1b4a7a80-a65c-11eb-8f13-4374c64fef20.mp4
+
 
 ## Available Scripts
 
