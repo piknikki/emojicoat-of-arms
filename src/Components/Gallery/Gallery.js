@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import '../CreateCoatOfArms/CreateCoatOfArms.css'
 import Coats from "../Coats/Coats";
 import { Link } from "react-router-dom";
@@ -32,3 +33,7 @@ const Gallery = ({ savedCoats }) => {
 }
 
 export default Gallery;
+
+Gallery.propTypes = {
+  savedCoats: PropTypes.array
+}

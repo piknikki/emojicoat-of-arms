@@ -4,8 +4,6 @@ import './Coats.css'
 import shield from "../../Assets/shield1.png";
 
 const Coats = ({ coats }) => {
-  console.log(coats)
-
   const mappedCoats = coats.map((coat, index) => {
     return (
       <div className="coat-wrapper" key={index}>
