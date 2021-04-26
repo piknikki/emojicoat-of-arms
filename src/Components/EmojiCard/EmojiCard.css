@@ -8,13 +8,22 @@
     font-size: 3em;
 }
 
-@media (max-width: 1000px), screen and (orientation: portrait) {
-    .emoji-card {
-        margin: 0 5px;
-        padding: 0 5px;
-    }
+/*.coat-selected {*/
+/*    font-size: 3em;*/
+/*}*/
 
-    .character {
-        font-size: 1.5em;
-    }
-}
+/*.remove-padding {*/
+/*    margin: 5px;*/
+/*    padding: 7px;*/
+/*}*/
+
+/*@media (max-width: 1000px), screen and (orientation: portrait) {*/
+/*    .emoji-card {*/
+/*        margin: 0 5px;*/
+/*        padding: 0 5px;*/
+/*    }*/
+
+/*    .character {*/
+/*        font-size: 1.5em;*/
+/*    }*/
+/*}*/
