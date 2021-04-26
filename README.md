@@ -44,6 +44,10 @@ really helped me to know that I had a team even though I was working strictly in
 ended up doing a code review on a PR for each other, but we did walk through code on zoom calls and talk about how 
 to improve. 
 
+Future iterations would include making the app more responsive and better on various screen sizes, as well as adding edit/delete 
+functionality to coats that are in the gallery. I would also love to add other design elements, like different shield shapes and a motto 
+inside a fancy scroll underneath the shield. 
+
 ## Some screen shots and gifs
 
 Making a new Coat of Arms, when there are none made yet:
