@@ -1,10 +1,55 @@
-# Getting Started with Create React App
+# Emoji Coat of Arms
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was a solo project with the goal of reinforcing learning of React, 
+React Router, asynchronous JavaScript, and end-to-end testing with Cypress. To facilitate that process, 
+the following tools were utilized, based on a niche audience of people who want to create a Coat of Arms 
+using emojis:
+  - Personas:  [User1](https://docs.google.com/document/d/1FfGP_ONHQj1KuLpNJjfuMWSpcLQjM6kHzIYmem3p2EQ/edit) 
+    and [User2](https://docs.google.com/document/d/1WKIFyyMNWZlh9pHPaF2ak6d5E1qJnwEHo5sBClzWZtA/edit)
+  - [Wireframes and inspiration](https://miro.com/app/board/o9J_lOZUZG0=/)
+  - [A personal project board of my own creation](https://app.gitkraken.com/glo/board/YFiB_IynhAASRtBW) (something like Kanban, but not quite)
+  - [The API I used](https://emoji-api.com/)
+  - [The repository](https://github.com/piknikki/emojicoat-of-arms)
+  - [The deployed site](https://emojicoat-of-arms.herokuapp.com/)
+
+This app is a fun take on creating a Coat of Arms, for the modern nerd. When you arrive at the root of the 
+app, you see a welcoming landing page and are encouraged to Get Started! From there you can navigate to creating a new 
+Coat of Arms using the navigation links or the button offered. You can also go to the gallery, where previously made coats will 
+be displayed. If you don't have any, there's another encouraging button to get started making some fun. 
+
+Once you do get started, you can search for emojis with search terms. One has been done for you, to get started (using the suggested 
+search term of "grin"), showing a handful of emojis to choose from. Use those or perform a search like unicorn or 
+heart or otter. You do you!! 
+
+Click on an emoji to put it on your coat. Double click on the chosen emojis if you want to remove one. Reset if you want to 
+start over. There's a counter so you know that you can only have 5, and once you do, you see a message inviting you 
+to save your creative masterpiece and go to the gallery to see all of your previous magic.
+
+Local storage has been utilized, to save your Coats of Arms so that you can refresh the browser without worrying 
+about losing your faves. 
+
+But what if, somehow, you navigated to some weird route that doesn't exist? That's okay! There's a welcoming 404 there, 
+to help you get back on the path to creating your best work.
+
+## My work process
+
+For this solo project, I was hoping to reinforce my learning of React, and to create something fun that is also 
+nice to interact with. I feel like I accomplished that, even though this application is not mobile responsive (like, at all). 
+If I had more time, I would refactor to make it mobile-friendly because I think my audience would definitely want 
+to do use the app on their phones. 
+
+Although this was a solo project, I sorely missed being on a team, so I formed a team with other cohort-mates (Jessica and Katie), 
+and we kept in close contact for rubber ducking and debugging, as well as feedback about flow and feel of our apps. It 
+really helped me to know that I had a team even though I was working strictly independently on my project. None of us 
+ended up doing a code review on a PR for each other, but we did walk through code on zoom calls and talk about how 
+to improve. 
+
+## Some screen shots and gifs
+
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, after cloning and running `yarn install` you can run:
 
 ### `yarn start`
 
@@ -14,57 +59,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
+### `yarn run cypress open`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches Cypress tests in interactive watch mode.\
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
