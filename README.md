@@ -44,6 +44,10 @@ really helped me to know that I had a team even though I was working strictly in
 ended up doing a code review on a PR for each other, but we did walk through code on zoom calls and talk about how 
 to improve. 
 
+Challenges included CSS (because I reused components, the formatting really messed with my head because the two spaces were not 
+the same and that also made responsiveness pretty much impossible). Ideal width is about 1200, and unfortunately there isn't much wiggle 
+room with that.
+
 Future iterations would include making the app more responsive and better on various screen sizes, as well as adding edit/delete 
 functionality to coats that are in the gallery. I would also love to add other design elements, like different shield shapes and a motto 
 inside a fancy scroll underneath the shield. 
