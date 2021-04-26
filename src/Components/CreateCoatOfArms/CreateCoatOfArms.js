@@ -7,10 +7,6 @@ import shield from '../../Assets/shield1.png'
 import {Link} from "react-router-dom";
 
 class CreateCoatOfArms extends Component {
-  // may also need the ability to select a shield
-  // propTypes
-  // todo ==> a complete coat of arms includes motto, crest, shield elements (emojis),
-  //  and supporters
   constructor(props) {
     super(props);
 
@@ -31,7 +27,6 @@ class CreateCoatOfArms extends Component {
   }
 
   selectEmoji = (emoji) => {
-    console.log(emoji)
     this.setState({ currentCoatEmojis: [...this.state.currentCoatEmojis, emoji] })
   }
 
@@ -39,13 +34,11 @@ class CreateCoatOfArms extends Component {
     if (this.state.currentCoatEmojis.length > 0) {
       return this.props.saveToGallery(this.state.currentCoatEmojis)
     } else {
-      // todo ==> fix this error handling so it won't redirect to gallery
       return this.setState({ error: 'Please enter 5 emojis for your coat of arms.'})
     }
   }
 
   removeEmojiFromCurrentCoat = (slug) => {
-    // console.log(obj)
     this.setState({ currentCoatEmojis: this.state.currentCoatEmojis.filter(emoji => emoji.slug !== slug)})
 
   }
