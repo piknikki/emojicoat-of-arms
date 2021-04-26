@@ -46,10 +46,12 @@ to improve.
 
 ## Some screen shots and gifs
 
+Making a new Coat of Arms, when there are none made yet:
 
 https://user-images.githubusercontent.com/28355326/116085478-171e5d00-a65c-11eb-89fa-e736acbde2d9.mp4
 
 
+Refreshing and seeing previously made coat, and seeing 404:
 
 https://user-images.githubusercontent.com/28355326/116085495-1b4a7a80-a65c-11eb-8f13-4374c64fef20.mp4
 
