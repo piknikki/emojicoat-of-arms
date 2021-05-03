@@ -11,6 +11,7 @@
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "start-server-and-test": "^1.12.1",
     "uuid": "^8.3.2",
     "web-vitals": "^1.0.1"
   },
@@ -19,7 +20,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "test-cypress": "start-server-and-test start http://localhost:3000 cy:run"
+    "cy-run": "cypress run",
+    "ci": "start-server-and-test 'yarn start' http://localhost:3000 'yarn cy-run'"
   },
   "eslintConfig": {
     "extends": [
