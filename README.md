@@ -1,4 +1,4 @@
-# Emoji Coat of Arms
+# Emoji Coat of Arms. [![Build Status](https://travis-ci.org/piknikki/emojicoat-of-arms.svg?branch=main)](https://travis-ci.org/piknikki/emojicoat-of-arms)
 
 This project was a solo project with the goal of reinforcing learning of React, 
 React Router, asynchronous JavaScript, and end-to-end testing with Cypress. To facilitate that process, 
