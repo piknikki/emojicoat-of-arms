@@ -11,3 +11,6 @@ deploy:
   skip_cleanup: true
   on:
     branch: main
+  script:
+  - yarn test-cypress
+  - yarn run build (edited)
