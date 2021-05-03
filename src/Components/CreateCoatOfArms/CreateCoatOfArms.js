@@ -82,7 +82,7 @@ class CreateCoatOfArms extends Component {
           <section className="box-left">
             {this.state.currentCoatEmojis.length === 5 &&
               <h3 className="feedback">
-                <span>🎉</span>
+                <span>🎉 🎉 🎉</span>
                 Great selections! Click save to see your Emoji Coat of Arms in the gallery.
               </h3>
             }
